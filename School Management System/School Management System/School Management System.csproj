@@ -108,6 +108,9 @@
     <EmbeddedResource Include="UI\Grade\FrmGradeMaster.resx">
       <DependentUpon>FrmGradeMaster.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Student\FrmStudentMaster.resx">
+      <DependentUpon>FrmStudentMaster.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Subject\FrmSubjectMaster.resx">
       <DependentUpon>FrmSubjectMaster.cs</DependentUpon>
     </EmbeddedResource>
