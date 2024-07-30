@@ -54,6 +54,48 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\FrmDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmDashboard.Designer.cs">
+      <DependentUpon>FrmDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Grade\FrmGradeMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Grade\FrmGradeMaster.Designer.cs">
+      <DependentUpon>FrmGradeMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Login\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Login\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Student\FrmStudentCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Student\FrmStudentCreate.Designer.cs">
+      <DependentUpon>FrmStudentCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Student\FrmStudentEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Student\FrmStudentEdit.Designer.cs">
+      <DependentUpon>FrmStudentEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Student\FrmStudentMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Student\FrmStudentMaster.Designer.cs">
+      <DependentUpon>FrmStudentMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Subject\FrmSubjectMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Subject\FrmSubjectMaster.Designer.cs">
+      <DependentUpon>FrmSubjectMaster.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -75,6 +117,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DAL\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
