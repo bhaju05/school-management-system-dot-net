@@ -97,6 +97,7 @@ namespace School_Management_System.UI.Student
             this.btnStuExit.TabIndex = 6;
             this.btnStuExit.Text = "Exit";
             this.btnStuExit.UseVisualStyleBackColor = false;
+            this.btnStuExit.Click += new System.EventHandler(this.btnStuExit_Click);
             // 
             // btnStuEdit
             // 
@@ -107,6 +108,7 @@ namespace School_Management_System.UI.Student
             this.btnStuEdit.TabIndex = 3;
             this.btnStuEdit.Text = "Edit";
             this.btnStuEdit.UseVisualStyleBackColor = false;
+            this.btnStuEdit.Click += new System.EventHandler(this.btnStuEdit_Click);
             // 
             // btnStuAdd
             // 
@@ -117,6 +119,7 @@ namespace School_Management_System.UI.Student
             this.btnStuAdd.TabIndex = 2;
             this.btnStuAdd.Text = "Add";
             this.btnStuAdd.UseVisualStyleBackColor = false;
+            this.btnStuAdd.Click += new System.EventHandler(this.btnStuAdd_Click);
             // 
             // btnStuDelete
             // 
@@ -127,6 +130,7 @@ namespace School_Management_System.UI.Student
             this.btnStuDelete.TabIndex = 1;
             this.btnStuDelete.Text = "Delete";
             this.btnStuDelete.UseVisualStyleBackColor = false;
+            this.btnStuDelete.Click += new System.EventHandler(this.btnStuDelete_Click);
             // 
             // btnStuRefresh
             // 
@@ -148,6 +152,7 @@ namespace School_Management_System.UI.Student
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmStudentMaster";
             this.Text = "FrmStudentMaster";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmStudentMaster_FormClosing);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudent)).EndInit();
             this.groupBox3.ResumeLayout(false);
