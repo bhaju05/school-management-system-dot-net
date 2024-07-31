@@ -12,6 +12,7 @@ namespace School_Management_System.UI.Grade
 {
     public partial class FrmGradeMaster : Form
     {
+        
         Boolean is_addNew = false;
         public FrmGradeMaster()
         {
@@ -74,13 +75,15 @@ namespace School_Management_System.UI.Grade
             DialogResult dr = MessageBox.Show("Do you want Delete?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
             {
-                //delete function
+                DAL.GradeDal.delete(10);
             }
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            //select all function
+           DataTable dt = DAL.GradeDal.GetAll();
+       
+            dgvGrade.DataSource = dt;
         }
 
         private void FrmGradeMaster_FormClosing(object sender, FormClosingEventArgs e)

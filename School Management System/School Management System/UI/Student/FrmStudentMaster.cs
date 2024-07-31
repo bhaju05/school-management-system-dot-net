@@ -51,5 +51,12 @@ namespace School_Management_System.UI.Student
                 e.Cancel = true;
             }
         }
+
+        private void btnStuRefresh_Click(object sender, EventArgs e)
+        {
+            DataTable dt = DAL.SubjectDal.GetAll();
+
+            dgvStudent.DataSource = dt;
+        }
     }
 }

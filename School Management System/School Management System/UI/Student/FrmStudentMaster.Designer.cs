@@ -141,6 +141,7 @@ namespace School_Management_System.UI.Student
             this.btnStuRefresh.TabIndex = 0;
             this.btnStuRefresh.Text = "Refresh";
             this.btnStuRefresh.UseVisualStyleBackColor = false;
+            this.btnStuRefresh.Click += new System.EventHandler(this.btnStuRefresh_Click);
             // 
             // FrmStudentMaster
             // 

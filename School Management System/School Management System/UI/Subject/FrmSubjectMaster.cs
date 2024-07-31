@@ -74,7 +74,9 @@ namespace School_Management_System.UI.Subject
 
         private void btnSubRefresh_Click(object sender, EventArgs e)
         {
-            //select all function
+            DataTable dt = DAL.SubjectDal.GetAll();
+
+            dgvSubject.DataSource = dt;
         }
 
         private void FrmSubjectMaster_FormClosing(object sender, FormClosingEventArgs e)
