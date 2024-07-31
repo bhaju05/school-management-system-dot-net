@@ -179,6 +179,7 @@ namespace School_Management_System.UI.Grade
             this.btnExit.TabIndex = 6;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnCancel
             // 
@@ -189,6 +190,7 @@ namespace School_Management_System.UI.Grade
             this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSave
             // 
@@ -199,6 +201,7 @@ namespace School_Management_System.UI.Grade
             this.btnSave.TabIndex = 4;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnEdit
             // 
@@ -209,6 +212,7 @@ namespace School_Management_System.UI.Grade
             this.btnEdit.TabIndex = 3;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnAdd
             // 
@@ -219,6 +223,7 @@ namespace School_Management_System.UI.Grade
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnDelete
             // 
@@ -229,6 +234,7 @@ namespace School_Management_System.UI.Grade
             this.btnDelete.TabIndex = 1;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnRefresh
             // 
@@ -239,6 +245,7 @@ namespace School_Management_System.UI.Grade
             this.btnRefresh.TabIndex = 0;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // FrmGradeMaster
             // 
@@ -252,6 +259,7 @@ namespace School_Management_System.UI.Grade
             this.Controls.Add(this.groupBox3);
             this.Name = "FrmGradeMaster";
             this.Text = "FrmGradeMaster";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmGradeMaster_FormClosing);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrade)).EndInit();
             this.groupBox2.ResumeLayout(false);
