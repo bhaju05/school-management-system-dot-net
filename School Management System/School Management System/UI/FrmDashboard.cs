@@ -16,5 +16,26 @@ namespace School_Management_System.UI
         {
             InitializeComponent();
         }
+
+        private void studentsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UI.Student.FrmStudentMaster f = new Student.FrmStudentMaster();
+            f.MdiParent = this;
+            f.Show();
+        }
+
+        private void subjectsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UI.Subject.FrmSubjectMaster f = new Subject.FrmSubjectMaster();
+            f.MdiParent = this; // show form within dashboard form , avoid to go back side of dashboard form
+            f.Show();
+        }
+
+        private void gradesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UI.Grade.FrmGradeMaster f = new Grade.FrmGradeMaster();
+            f.MdiParent = this;
+            f.Show();
+        }
     }
 }

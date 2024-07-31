@@ -151,6 +151,7 @@ namespace School_Management_System.UI.Student
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmStudentMaster";
+            this.ShowIcon = false;
             this.Text = "FrmStudentMaster";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmStudentMaster_FormClosing);
             this.groupBox1.ResumeLayout(false);

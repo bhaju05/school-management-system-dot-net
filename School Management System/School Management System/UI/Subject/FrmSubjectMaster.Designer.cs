@@ -278,6 +278,8 @@ namespace School_Management_System.UI.Subject
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox3);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmSubjectMaster";
             this.Text = "FrmSubjectMaster";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmSubjectMaster_FormClosing);
