@@ -30,8 +30,8 @@ namespace School_Management_System.UI.Subject
         private void InitializeComponent()
         {
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnSubExit = new System.Windows.Forms.Button();
+            this.btnSubCancel = new System.Windows.Forms.Button();
             this.btnSubSave = new System.Windows.Forms.Button();
             this.btnSubEdit = new System.Windows.Forms.Button();
             this.btnSubAdd = new System.Windows.Forms.Button();
@@ -57,8 +57,8 @@ namespace School_Management_System.UI.Subject
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.btnExit);
-            this.groupBox3.Controls.Add(this.btnCancel);
+            this.groupBox3.Controls.Add(this.btnSubExit);
+            this.groupBox3.Controls.Add(this.btnSubCancel);
             this.groupBox3.Controls.Add(this.btnSubSave);
             this.groupBox3.Controls.Add(this.btnSubEdit);
             this.groupBox3.Controls.Add(this.btnSubAdd);
@@ -71,25 +71,27 @@ namespace School_Management_System.UI.Subject
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             // 
-            // btnExit
+            // btnSubExit
             // 
-            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExit.Location = new System.Drawing.Point(690, 27);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 52);
-            this.btnExit.TabIndex = 6;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnSubExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSubExit.Location = new System.Drawing.Point(690, 27);
+            this.btnSubExit.Name = "btnSubExit";
+            this.btnSubExit.Size = new System.Drawing.Size(75, 52);
+            this.btnSubExit.TabIndex = 6;
+            this.btnSubExit.Text = "Exit";
+            this.btnSubExit.UseVisualStyleBackColor = false;
+            this.btnSubExit.Click += new System.EventHandler(this.btnSubExit_Click);
             // 
-            // btnCancel
+            // btnSubCancel
             // 
-            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.Location = new System.Drawing.Point(607, 27);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 52);
-            this.btnCancel.TabIndex = 5;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnSubCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSubCancel.Location = new System.Drawing.Point(607, 27);
+            this.btnSubCancel.Name = "btnSubCancel";
+            this.btnSubCancel.Size = new System.Drawing.Size(75, 52);
+            this.btnSubCancel.TabIndex = 5;
+            this.btnSubCancel.Text = "Cancel";
+            this.btnSubCancel.UseVisualStyleBackColor = false;
+            this.btnSubCancel.Click += new System.EventHandler(this.btnSubCancel_Click);
             // 
             // btnSubSave
             // 
@@ -100,6 +102,7 @@ namespace School_Management_System.UI.Subject
             this.btnSubSave.TabIndex = 4;
             this.btnSubSave.Text = "Save";
             this.btnSubSave.UseVisualStyleBackColor = false;
+            this.btnSubSave.Click += new System.EventHandler(this.btnSubSave_Click);
             // 
             // btnSubEdit
             // 
@@ -110,6 +113,7 @@ namespace School_Management_System.UI.Subject
             this.btnSubEdit.TabIndex = 3;
             this.btnSubEdit.Text = "Edit";
             this.btnSubEdit.UseVisualStyleBackColor = false;
+            this.btnSubEdit.Click += new System.EventHandler(this.btnSubEdit_Click);
             // 
             // btnSubAdd
             // 
@@ -120,6 +124,7 @@ namespace School_Management_System.UI.Subject
             this.btnSubAdd.TabIndex = 2;
             this.btnSubAdd.Text = "Add";
             this.btnSubAdd.UseVisualStyleBackColor = false;
+            this.btnSubAdd.Click += new System.EventHandler(this.btnSubAdd_Click);
             // 
             // btnSubDelete
             // 
@@ -130,6 +135,7 @@ namespace School_Management_System.UI.Subject
             this.btnSubDelete.TabIndex = 1;
             this.btnSubDelete.Text = "Delete";
             this.btnSubDelete.UseVisualStyleBackColor = false;
+            this.btnSubDelete.Click += new System.EventHandler(this.btnSubDelete_Click);
             // 
             // btnSubRefresh
             // 
@@ -140,6 +146,7 @@ namespace School_Management_System.UI.Subject
             this.btnSubRefresh.TabIndex = 0;
             this.btnSubRefresh.Text = "Refresh";
             this.btnSubRefresh.UseVisualStyleBackColor = false;
+            this.btnSubRefresh.Click += new System.EventHandler(this.btnSubRefresh_Click);
             // 
             // groupBox2
             // 
@@ -273,6 +280,7 @@ namespace School_Management_System.UI.Subject
             this.Controls.Add(this.groupBox3);
             this.Name = "FrmSubjectMaster";
             this.Text = "FrmSubjectMaster";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmSubjectMaster_FormClosing);
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -285,8 +293,8 @@ namespace School_Management_System.UI.Subject
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnSubExit;
+        private System.Windows.Forms.Button btnSubCancel;
         private System.Windows.Forms.Button btnSubSave;
         private System.Windows.Forms.Button btnSubEdit;
         private System.Windows.Forms.Button btnSubAdd;
