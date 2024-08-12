@@ -22,7 +22,7 @@ namespace School_Management_System.DAL
             try
             {
                 SqlCommand cmd = conn.CreateCommand();
-                cmd.CommandText = "select * from students";
+                cmd.CommandText = "select * from subjects";
                 if (conn.State != ConnectionState.Open)
                 {
                     conn.Open();
@@ -43,21 +43,102 @@ namespace School_Management_System.DAL
             }
             return dt;
         }
-        public static void GetById(int id)
+        public static DataTable GetById(int id)
         {
-            MessageBox.Show("This is get all grade details by id");
+            DataTable dt = new DataTable();
+            try
+            {
+                SqlCommand cmd = conn.CreateCommand();
+                cmd.CommandText = "select * from subjects WHERE  [id]= '[id]' ";
+                if (conn.State != ConnectionState.Open)
+                {
+                    conn.Open();
+                }
+                SqlDataReader dr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                dt.Load(dr);
+
+                cmd.Dispose();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Database Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return dt;
         }
-        public static void insert(String GradeName, String GradeOrder)
+        public static void insert(String SubjectName, String SubjectIndex, String SubjectNumber,String SubjectOrder)
         {
-            MessageBox.Show("This is insert by grade");
+            try
+            {
+                SqlCommand cmd = conn.CreateCommand();
+                cmd.CommandText = $"INSERT INTO [dbo].[subjects] ([subject_name] ,[subject_index],[subject_number],[subject_order]) VALUES('{SubjectName}','{SubjectIndex}','{SubjectNumber}','{SubjectOrder}')";
+                if (conn.State != ConnectionState.Open)
+                {
+                    conn.Open();
+                }
+                cmd.ExecuteNonQuery();
+                cmd.Dispose();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Database Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
-        public static void update(String GradeName, String GradeOrder, int id)
+        public static void update(int SelectedId,String SubjectName, String SubjectIndex, String SubjectNumber, String SubjectOrder, int id)
         {
-            MessageBox.Show("This is update by grade");
+            try
+            {
+                SqlCommand cmd = conn.CreateCommand();
+                cmd.CommandText = $"UPDATE [dbo].[subjects] SET [subject_name] ='{SubjectName}' ,[subject_index] = '{SubjectIndex}' ,[subject_number] = '{SubjectNumber}',[subject_order] = '{SubjectOrder}',[created_at]='{DateTime.Now.ToString()}' WHERE [id]='{id}';";
+                if (conn.State != ConnectionState.Open)
+                {
+                    conn.Open();
+                }
+                cmd.ExecuteNonQuery();
+                cmd.Dispose();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Database Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
         public static void delete(int id)
         {
-            MessageBox.Show("This is delete by grade");
+            
+            try
+            {
+                SqlCommand cmd = conn.CreateCommand();
+                cmd.CommandText = $"DELETE FROM [dbo].[subjects] WHERE [id]='{id}';";
+                if (conn.State != ConnectionState.Open)
+                {
+                    conn.Open();
+                }
+                cmd.ExecuteNonQuery();
+                cmd.Dispose();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Database Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
     }
 }

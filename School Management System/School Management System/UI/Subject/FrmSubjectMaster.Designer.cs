@@ -38,14 +38,14 @@ namespace School_Management_System.UI.Subject
             this.btnSubDelete = new System.Windows.Forms.Button();
             this.btnSubRefresh = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtGroup = new System.Windows.Forms.TextBox();
-            this.txtOrder = new System.Windows.Forms.TextBox();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.labelGroup = new System.Windows.Forms.Label();
-            this.labelOrder = new System.Windows.Forms.Label();
-            this.lableName = new System.Windows.Forms.Label();
+            this.txtNumberSub = new System.Windows.Forms.TextBox();
+            this.labelNumberSub = new System.Windows.Forms.Label();
+            this.txtIndexSub = new System.Windows.Forms.TextBox();
+            this.txtOrderSub = new System.Windows.Forms.TextBox();
+            this.txtNameSub = new System.Windows.Forms.TextBox();
+            this.labelIndexSub = new System.Windows.Forms.Label();
+            this.labelOrderSub = new System.Windows.Forms.Label();
+            this.lableNameSub = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvSubject = new System.Windows.Forms.DataGridView();
@@ -150,14 +150,14 @@ namespace School_Management_System.UI.Subject
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.txtGroup);
-            this.groupBox2.Controls.Add(this.txtOrder);
-            this.groupBox2.Controls.Add(this.txtName);
-            this.groupBox2.Controls.Add(this.labelGroup);
-            this.groupBox2.Controls.Add(this.labelOrder);
-            this.groupBox2.Controls.Add(this.lableName);
+            this.groupBox2.Controls.Add(this.txtNumberSub);
+            this.groupBox2.Controls.Add(this.labelNumberSub);
+            this.groupBox2.Controls.Add(this.txtIndexSub);
+            this.groupBox2.Controls.Add(this.txtOrderSub);
+            this.groupBox2.Controls.Add(this.txtNameSub);
+            this.groupBox2.Controls.Add(this.labelIndexSub);
+            this.groupBox2.Controls.Add(this.labelOrderSub);
+            this.groupBox2.Controls.Add(this.lableNameSub);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Right;
             this.groupBox2.Location = new System.Drawing.Point(481, 25);
             this.groupBox2.Name = "groupBox2";
@@ -165,78 +165,78 @@ namespace School_Management_System.UI.Subject
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             // 
-            // textBox1
+            // txtNumberSub
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(86, 135);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(215, 29);
-            this.textBox1.TabIndex = 7;
+            this.txtNumberSub.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumberSub.Location = new System.Drawing.Point(86, 135);
+            this.txtNumberSub.Name = "txtNumberSub";
+            this.txtNumberSub.Size = new System.Drawing.Size(215, 29);
+            this.txtNumberSub.TabIndex = 7;
             // 
-            // label2
+            // labelNumberSub
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(22, 138);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 17);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Number";
+            this.labelNumberSub.AutoSize = true;
+            this.labelNumberSub.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNumberSub.Location = new System.Drawing.Point(22, 138);
+            this.labelNumberSub.Name = "labelNumberSub";
+            this.labelNumberSub.Size = new System.Drawing.Size(58, 17);
+            this.labelNumberSub.TabIndex = 6;
+            this.labelNumberSub.Text = "Number";
             // 
-            // txtGroup
+            // txtIndexSub
             // 
-            this.txtGroup.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGroup.Location = new System.Drawing.Point(86, 92);
-            this.txtGroup.Name = "txtGroup";
-            this.txtGroup.Size = new System.Drawing.Size(215, 29);
-            this.txtGroup.TabIndex = 5;
+            this.txtIndexSub.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIndexSub.Location = new System.Drawing.Point(86, 92);
+            this.txtIndexSub.Name = "txtIndexSub";
+            this.txtIndexSub.Size = new System.Drawing.Size(215, 29);
+            this.txtIndexSub.TabIndex = 5;
             // 
-            // txtOrder
+            // txtOrderSub
             // 
-            this.txtOrder.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOrder.Location = new System.Drawing.Point(86, 178);
-            this.txtOrder.Name = "txtOrder";
-            this.txtOrder.Size = new System.Drawing.Size(215, 29);
-            this.txtOrder.TabIndex = 4;
+            this.txtOrderSub.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOrderSub.Location = new System.Drawing.Point(86, 178);
+            this.txtOrderSub.Name = "txtOrderSub";
+            this.txtOrderSub.Size = new System.Drawing.Size(215, 29);
+            this.txtOrderSub.TabIndex = 4;
             // 
-            // txtName
+            // txtNameSub
             // 
-            this.txtName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(86, 50);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(215, 29);
-            this.txtName.TabIndex = 3;
+            this.txtNameSub.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNameSub.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNameSub.Location = new System.Drawing.Point(86, 50);
+            this.txtNameSub.Name = "txtNameSub";
+            this.txtNameSub.Size = new System.Drawing.Size(215, 29);
+            this.txtNameSub.TabIndex = 3;
             // 
-            // labelGroup
+            // labelIndexSub
             // 
-            this.labelGroup.AutoSize = true;
-            this.labelGroup.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGroup.Location = new System.Drawing.Point(22, 95);
-            this.labelGroup.Name = "labelGroup";
-            this.labelGroup.Size = new System.Drawing.Size(42, 17);
-            this.labelGroup.TabIndex = 2;
-            this.labelGroup.Text = "Index";
+            this.labelIndexSub.AutoSize = true;
+            this.labelIndexSub.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelIndexSub.Location = new System.Drawing.Point(22, 95);
+            this.labelIndexSub.Name = "labelIndexSub";
+            this.labelIndexSub.Size = new System.Drawing.Size(42, 17);
+            this.labelIndexSub.TabIndex = 2;
+            this.labelIndexSub.Text = "Index";
             // 
-            // labelOrder
+            // labelOrderSub
             // 
-            this.labelOrder.AutoSize = true;
-            this.labelOrder.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelOrder.Location = new System.Drawing.Point(22, 181);
-            this.labelOrder.Name = "labelOrder";
-            this.labelOrder.Size = new System.Drawing.Size(43, 17);
-            this.labelOrder.TabIndex = 1;
-            this.labelOrder.Text = "Order";
+            this.labelOrderSub.AutoSize = true;
+            this.labelOrderSub.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelOrderSub.Location = new System.Drawing.Point(22, 181);
+            this.labelOrderSub.Name = "labelOrderSub";
+            this.labelOrderSub.Size = new System.Drawing.Size(43, 17);
+            this.labelOrderSub.TabIndex = 1;
+            this.labelOrderSub.Text = "Order";
             // 
-            // lableName
+            // lableNameSub
             // 
-            this.lableName.AutoSize = true;
-            this.lableName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lableName.Location = new System.Drawing.Point(22, 53);
-            this.lableName.Name = "lableName";
-            this.lableName.Size = new System.Drawing.Size(44, 17);
-            this.lableName.TabIndex = 0;
-            this.lableName.Text = "Name";
+            this.lableNameSub.AutoSize = true;
+            this.lableNameSub.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lableNameSub.Location = new System.Drawing.Point(22, 53);
+            this.lableNameSub.Name = "lableNameSub";
+            this.lableNameSub.Size = new System.Drawing.Size(44, 17);
+            this.lableNameSub.TabIndex = 0;
+            this.lableNameSub.Text = "Name";
             // 
             // label1
             // 
@@ -283,6 +283,7 @@ namespace School_Management_System.UI.Subject
             this.Name = "FrmSubjectMaster";
             this.Text = "FrmSubjectMaster";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmSubjectMaster_FormClosing);
+            this.Load += new System.EventHandler(this.FrmSubjectMaster_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -303,16 +304,16 @@ namespace School_Management_System.UI.Subject
         private System.Windows.Forms.Button btnSubDelete;
         private System.Windows.Forms.Button btnSubRefresh;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txtGroup;
-        private System.Windows.Forms.TextBox txtOrder;
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.Label labelGroup;
-        private System.Windows.Forms.Label labelOrder;
-        private System.Windows.Forms.Label lableName;
+        private System.Windows.Forms.TextBox txtIndexSub;
+        private System.Windows.Forms.TextBox txtOrderSub;
+        private System.Windows.Forms.TextBox txtNameSub;
+        private System.Windows.Forms.Label labelIndexSub;
+        private System.Windows.Forms.Label labelOrderSub;
+        private System.Windows.Forms.Label lableNameSub;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvSubject;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtNumberSub;
+        private System.Windows.Forms.Label labelNumberSub;
     }
 }

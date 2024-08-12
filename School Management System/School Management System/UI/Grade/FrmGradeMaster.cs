@@ -45,7 +45,13 @@ namespace School_Management_System.UI.Grade
         {
             if (is_addNew)
             {
-                //insert function
+                DAL.GradeDal.insert(txtName.Text.Trim(), txtGroup.Text.Trim(), txtOrder.Text.Trim());
+                MessageBox.Show("Save Sucessfully....!");
+                DataTable dt = DAL.GradeDal.GetAll();
+                dgvGrade.DataSource = dt;
+                txtName.Text = null;
+                txtGroup.Text = null;
+                txtOrder.Text = null;
             }
             else
             {
@@ -93,6 +99,12 @@ namespace School_Management_System.UI.Grade
             {
                 e.Cancel = true;
             } 
+        }
+
+        private void FrmGradeMaster_Load(object sender, EventArgs e)
+        {
+            DataTable dt = DAL.GradeDal.GetAll();
+            dgvGrade.DataSource = dt;
         }
     }
 }

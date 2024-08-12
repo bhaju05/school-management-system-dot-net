@@ -43,14 +43,33 @@ namespace School_Management_System.UI.Subject
         {
             if (is_addNew)
             {
-                //insert function
+                DAL.SubjectDal.insert(txtNameSub.Text.Trim(), txtIndexSub.Text.Trim(), txtNumberSub.Text.Trim(), txtOrderSub.Text.Trim());
+                MessageBox.Show("Save Sucessfully....!");
+                DataTable dt = DAL.SubjectDal.GetAll();
+                dgvSubject.DataSource = dt;
+                txtNameSub.Text = null;
+                txtIndexSub.Text = null;
+                txtNumberSub.Text = null;
+                txtOrderSub.Text = null;
             }
             else
             {
-                //update function
+                //int selectedId = Convert.ToInt32(dgvSubject.SelectedRows[0].Cells["Id"].Value);
+                //DAL.SubjectDal.update(selectedId, txtNameSub.Text.Trim(), txtIndexSub.Text.Trim(), txtNumberSub.Text.Trim(), txtOrderSub.Text.Trim());
+                //MessageBox.Show("Update Successfully....!");
+
+                //DataTable dt = DAL.SubjectDal.GetAll();
+                //dgvSubject.DataSource = dt;
+
+                //txtNameSub.Text = null;
+                //txtIndexSub.Text = null;
+                //txtNumberSub.Text = null;
+                //txtOrderSub.Text = null;
+                ////update function
+                //ButtonEnable(false);
             }
-            ButtonEnable(false);
         }
+
 
         private void btnSubEdit_Click(object sender, EventArgs e)
         {
@@ -65,17 +84,32 @@ namespace School_Management_System.UI.Subject
 
         private void btnSubDelete_Click(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show("Do you want Delete?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dr == DialogResult.Yes)
-            {
+         
+            
+                if (dgvSubject.SelectedRows.Count > 0)
+                {
+                    DialogResult dr = MessageBox.Show("Do you want to delete?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (dr == DialogResult.Yes)
+                    {
+                        int selectedId = Convert.ToInt32(dgvSubject.SelectedRows[0].Cells["Id"].Value);
+                        DAL.SubjectDal.delete(selectedId);
+                        MessageBox.Show("Deleted Successfully....!");
+                        DataTable dt = DAL.SubjectDal.GetAll();
+                        dgvSubject.DataSource = dt;
+                        
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please select a row to delete.","Alert Message!", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                }
                 //delete function
-            }
+            
         }
 
         private void btnSubRefresh_Click(object sender, EventArgs e)
         {
             DataTable dt = DAL.SubjectDal.GetAll();
-
             dgvSubject.DataSource = dt;
         }
 
@@ -86,6 +120,12 @@ namespace School_Management_System.UI.Subject
             {
                 e.Cancel = true;
             }
+        }
+
+        private void FrmSubjectMaster_Load(object sender, EventArgs e)
+        {
+            DataTable dt = DAL.SubjectDal.GetAll();
+            dgvSubject.DataSource = dt;
         }
     }
 }

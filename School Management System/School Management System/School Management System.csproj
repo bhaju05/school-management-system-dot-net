@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\GradeDal.cs" />
+    <Compile Include="DAL\GradeSubjectDal.cs" />
     <Compile Include="DAL\StudentDal.cs" />
     <Compile Include="DAL\SubjectDal.cs" />
     <Compile Include="Form1.cs">

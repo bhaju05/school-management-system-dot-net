@@ -37,5 +37,14 @@ namespace School_Management_System.UI
             f.MdiParent = this;
             f.Show();
         }
+
+        private void FrmDashboard_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Do you want close?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
     }
 }

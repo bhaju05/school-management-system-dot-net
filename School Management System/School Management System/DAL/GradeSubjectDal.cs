@@ -10,26 +10,26 @@ using System.Windows.Forms;
 
 namespace School_Management_System.DAL
 {
-    public class GradeDal
+    public class GradeSubjectDal
     {
         static SqlConnection conn = new SqlConnection(ConfigurationManager.AppSettings["ConnectionString"].ToString());
-        
+
 
         public static DataTable GetAll()
         {
-            
+
             DataTable dt = new DataTable();
             try
             {
                 SqlCommand cmd = conn.CreateCommand();
-                cmd.CommandText = "select * from grades";
-                if(conn.State != ConnectionState.Open)
+                cmd.CommandText = "SELECT [id] ,[grade_id] ,[subject_id] FROM [dbo].[grade_subject]";
+                if (conn.State != ConnectionState.Open)
                 {
                     conn.Open();
                 }
                 SqlDataReader dr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
                 dt.Load(dr);
-            
+
                 cmd.Dispose();
             }
             catch (Exception ex)
@@ -49,7 +49,7 @@ namespace School_Management_System.DAL
             try
             {
                 SqlCommand cmd = conn.CreateCommand();
-                cmd.CommandText = "select * from grades WHERE  [id]= '[id]' ";
+                cmd.CommandText = $"SELECT [id] ,[grade_id] ,[subject_id] FROM [dbo].[grade_subject] WHERE  [id]= '[id]' ";
                 if (conn.State != ConnectionState.Open)
                 {
                     conn.Open();
@@ -70,13 +70,15 @@ namespace School_Management_System.DAL
             }
             return dt;
         }
-        public static void insert(String GradeName, String GradeGroup,String GradeOrder)
+        public static void insert(String grade_id, String subject_id)
         {
-            
+
             try
             {
                 SqlCommand cmd = conn.CreateCommand();
-                cmd.CommandText =  $"INSERT INTO [dbo].[grades] ([grade_name] ,[grade_group],[grade_order]) VALUES('{GradeName}','{GradeGroup}','{GradeOrder}')";
+
+
+                cmd.CommandText = $"INSERT INTO [dbo].[grade_subject]([grade_id] ,[subject_id]) VALUES('{grade_id}','{subject_id}')";
                 if (conn.State != ConnectionState.Open)
                 {
                     conn.Open();
@@ -94,12 +96,12 @@ namespace School_Management_System.DAL
                 conn.Close();
             }
         }
-        public static void update(String GradeName,  String GradeGroup, String GradeOrder,int id)
+        public static void update(String GradeName, String GradeGroup, String GradeOrder, int id)
         {
             try
             {
                 SqlCommand cmd = conn.CreateCommand();
-                cmd.CommandText = $"UPDATE [dbo].[grades] SET [grade_name] ='{GradeName}' ,[grade_group] = '{GradeGroup}' ,[grade_order] = '{GradeOrder}'  WHERE [id]='{id}';";
+                cmd.CommandText = $"UPDATE [dbo].[grade_subject] SET [grade_name] ='{GradeName}' ,[grade_group] = '{GradeGroup}' ,[grade_order] = '{GradeOrder}'  WHERE [id]='{id}';";
                 if (conn.State != ConnectionState.Open)
                 {
                     conn.Open();
@@ -123,7 +125,7 @@ namespace School_Management_System.DAL
             try
             {
                 SqlCommand cmd = conn.CreateCommand();
-                cmd.CommandText = $"DELETE FROM [dbo].[grades] WHERE [id]='{id}';";
+                cmd.CommandText = $"DELETE FROM [dbo].[grade_subject] WHERE [id]='{id}';";
                 if (conn.State != ConnectionState.Open)
                 {
                     conn.Open();

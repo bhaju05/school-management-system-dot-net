@@ -261,6 +261,7 @@ namespace School_Management_System.UI.Grade
             this.Name = "FrmGradeMaster";
             this.Text = "FrmGradeMaster";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmGradeMaster_FormClosing);
+            this.Load += new System.EventHandler(this.FrmGradeMaster_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrade)).EndInit();
             this.groupBox2.ResumeLayout(false);
