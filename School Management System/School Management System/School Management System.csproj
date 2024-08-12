@@ -65,6 +65,12 @@
     <Compile Include="UI\FrmDashboard.Designer.cs">
       <DependentUpon>FrmDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\GradeSubject\FrmGradeSubjectMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\GradeSubject\FrmGradeSubjectMaster.Designer.cs">
+      <DependentUpon>FrmGradeSubjectMaster.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Grade\FrmGradeMaster.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,9 @@
     </Compile>
     <EmbeddedResource Include="UI\FrmDashboard.resx">
       <DependentUpon>FrmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\GradeSubject\FrmGradeSubjectMaster.resx">
+      <DependentUpon>FrmGradeSubjectMaster.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Grade\FrmGradeMaster.resx">
       <DependentUpon>FrmGradeMaster.cs</DependentUpon>

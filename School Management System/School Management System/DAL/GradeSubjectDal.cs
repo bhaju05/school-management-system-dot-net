@@ -96,12 +96,12 @@ namespace School_Management_System.DAL
                 conn.Close();
             }
         }
-        public static void update(String GradeName, String GradeGroup, String GradeOrder, int id)
+        public static void update(String grade_id, String subject_id, int id)
         {
             try
             {
                 SqlCommand cmd = conn.CreateCommand();
-                cmd.CommandText = $"UPDATE [dbo].[grade_subject] SET [grade_name] ='{GradeName}' ,[grade_group] = '{GradeGroup}' ,[grade_order] = '{GradeOrder}'  WHERE [id]='{id}';";
+                cmd.CommandText = $"UPDATE [dbo].[grade_subject] SET [grade_id] = '{grade_id}',[subject_id] ='{subject_id}' WHERE [id]='{id}'";
                 if (conn.State != ConnectionState.Open)
                 {
                     conn.Open();
